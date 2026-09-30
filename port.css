@@ -1,0 +1,136 @@
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#1e88e5;color:#fff;font-family:Arial,sans-serif}
+ul{list-style:none}
+.tela{min-height:100vh;display:flex;flex-direction:column}
+.conteudo{flex:1;padding:40px 8vw}
+.home,.contato{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center
+}
+.barra{
+    background:#222;
+    border-top:5px solid #111;
+    padding:16px 4vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+.nome{font-weight:bold;font-size:20px}
+.barra ul{display:flex;gap:10px}
+.barra a{
+    color:#fff;
+    text-decoration:none;
+    display:block;
+    padding:7px 15px;
+    border:2px solid #fff;
+    border-radius:8px
+}
+.barra a:hover{background:#fff;color:#222}
+#home{
+    background:
+        radial-gradient(circle at 15% 20%,rgba(255,255,255,.22),transparent 40%),
+        radial-gradient(circle at 85% 80%,rgba(0,229,255,.25),transparent 45%),
+        linear-gradient(135deg,#0d47a1,#1e88e5 55%,#42a5f5)
+}
+#foto{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border:3px solid #fff;
+    border-radius:50%;
+    margin-bottom:18px;
+    box-shadow:0 0 0 8px rgba(255,255,255,.18),0 15px 40px rgba(0,0,0,.4)
+}
+.home h1,.home h3{color:#fff}
+.home h1{font-size:44px;text-shadow:0 3px 10px rgba(0,0,0,.35)}
+.sobre{display:flex;gap:50px}
+.sobre .texto{flex:1}
+.caixas{display:flex;flex-direction:column;gap:25px}
+.caixa{
+    width:160px;
+    height:160px;
+    border:1px solid #111;
+    border-radius:12px;
+    background:#1976d2
+}
+.texto{margin-top:50px}
+.texto p{
+    line-height:1.6;
+    padding-bottom:8px;
+    margin:20px 0 14px;
+    border-bottom:2px solid #fff
+}
+.certificados{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    align-content:start
+}
+.certificado{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center
+}
+.imagem{
+    width:100%;
+    max-width:280px;
+    height:390px;
+    object-fit:cover;
+    object-position:top;
+    border-radius:10px
+}
+.certificado .texto{width:100%;margin-top:20px}
+.certificado .texto p{margin:12px 0 0}
+.certificado h3{min-height:3.9em}
+.contato h2{font-size:40px;color:#111;margin-bottom:14px}
+.intro{max-width:560px;line-height:1.6;margin-bottom:45px}
+.rodape{margin-top:60px;font-size:14px;opacity:.8}
+.contatos{display:flex;flex-wrap:wrap;justify-content:center;gap:30px}
+.card{
+    width:250px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    padding:30px 20px;
+    background:#1976d2;
+    border:2px solid #111;
+    border-radius:16px;
+    color:#fff;
+    text-decoration:none;
+    transition:.2s
+}
+.card:hover{
+    background:#1565c0;
+    transform:translateY(-6px);
+    box-shadow:0 10px 20px rgba(0,0,0,.3)
+}
+.card img{width:60px;height:60px;margin-bottom:8px}
+.card strong{font-size:20px}
+.card small{font-size:14px;opacity:.9}
+.card p{
+    width:100%;
+    margin-top:12px;
+    padding-top:10px;
+    font-size:14px;
+    border-top:2px solid #fff
+}
+@media(max-width:1000px){
+    .certificados{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+    .barra,.sobre{flex-direction:column}
+    .barra ul{flex-wrap:wrap;justify-content:center}
+    .caixa{width:100%}
+    .certificados{grid-template-columns:1fr}
+    .certificado h3{min-height:0}
+    .imagem{height:340px}
+    #foto{width:200px;height:200px}
+    .contato h2{font-size:30px}
+}
